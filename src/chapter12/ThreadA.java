@@ -2,14 +2,16 @@ package chapter12;
 
 public class ThreadA extends Thread {
 
-    public ThreadA() {
-        setName("ThreadA");
+    private WorkObject workObject;
+
+    public ThreadA(WorkObject workObject) {
+        this.workObject = workObject;
     }
 
     @Override
     public void run() {
-        for (int i=0; i<2; i++) {
-            System.out.println(getName() + " 가 출력한 내용");
+        for (int i=0; i<10; i++) {
+            workObject.methodA();
         }
     }
 }

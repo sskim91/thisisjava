@@ -2,9 +2,15 @@ package chapter12;
 
 public class ThreadB extends Thread {
 
+    private WorkObject workObject;
+
+    public ThreadB(WorkObject workObject) {
+        this.workObject = workObject;
+    }
+
     public void run() {
-        for (int i=0; i<2; i++) {
-            System.out.println(getName()+" 가 출력한 내용");
+        for (int i=0; i<10; i++) {
+            workObject.methodB();
         }
     }
 }
