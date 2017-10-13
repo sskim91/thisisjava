@@ -1,5 +1,5 @@
 3.다음은 Soundable 인터페이스입니다. sound() 추상 메소드는 객체의 소리를 리턴
-~~~
+~~~java
 public interface Soundable {
     public String sound();
 }
@@ -8,7 +8,7 @@ SoundableExample 클래스에서 printSound() 메소드는 Soundable 인터페�
 타입의 매개변수를 가지고 있습니다. main() 메소드에서 printSound()를 호출할 때 Cat과
 Dog 객체를 주고 실행하면 각각 "야옹"과 "멍멍"이 출력되도록 Cat과 Dog 클래스를 작성.
 
-~~~
+~~~java
 public class SoundableExample{
     public static void main(String[] args) {
         printSound(new Dog());
@@ -22,7 +22,7 @@ public class SoundableExample{
 ~~~
 
 Dog, Cat 객체 작성
-~~~
+~~~java
 public class Dog implements Soundable {
 
     private String dogSound;
@@ -59,7 +59,7 @@ OracleDao와 MySqlDao 객체를 매개값으로 주고 호출했습니다. dbWor
 모두 매개값으로 받기 위해 DataAccessObject 타입의 매개 변수를 가지고 있습니다.
 실행 결과를 보고 DataAccessObject 인터페이스와 OracleDao, MySqlDao 구현 클래스를 각각 작성
 
-~~~
+~~~java
 public class DaoExample {
     public static void main(String[] args) {
         dbWork(new OracleDao());
@@ -74,7 +74,6 @@ public class DaoExample {
     }
 }
 ~~~
-
     -결과
     Oracle DB에서 검색
     Oracle DB에서 삽입
@@ -86,7 +85,7 @@ public class DaoExample {
     MySql DB에서 삭제
     
 코드    
-~~~
+~~~java
 public interface DataAccessObject {
     public void select();
 
@@ -156,7 +155,7 @@ public class OracleDao implements DataAccessObject {
 ~~~
 
 5.다음은 Action 인터페이스입니다. work() 추상 메소드는 객체의 작업을 시작시킵니다.
-~~~
+~~~java
 public interface Action {
     public void work();
 }
@@ -164,7 +163,7 @@ public interface Action {
 
 ActionExample 클래스의 main() 메소드에서 Action의 익명 구현 객체를 만들어
 다음과 같은 실행 결과가 나올 수 있도록 박스 안에 들어갈 코드를 작성해보세요.
-~~~
+~~~java
 public class ActionExample {
     public static void main(String[] args) {
 
@@ -179,7 +178,7 @@ public class ActionExample {
     복사를 합니다.
 
 코드
-~~~
+~~~java
 public class ActionExample {
     public static void main(String[] args) {
 
